@@ -1,15 +1,14 @@
 import { ApolloClient, ApolloLink, from } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { HttpLink } from '@apollo/client/link/http';
-import { omitDeep, Dictionary } from '@enouvo/react-uikit';
+import type { Dictionary } from '@enouvo/react-uikit';
+import { omitDeep } from '@enouvo/react-uikit';
 import { onError } from 'apollo-link-error';
 import { cache } from './cache';
 
 const mainLink = new HttpLink({ uri: import.meta.env.VITE_CHAT_API_URL });
 
-const withToken = setContext(async () => {
-  return {};
-});
+const withToken = setContext(() => ({}));
 
 const authMiddleware = new ApolloLink((operation, forward) => {
   const { headers, token } = operation.getContext();
@@ -26,14 +25,16 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 
 const errorHandler = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
-    graphQLErrors.forEach(({ message, locations, path, extensions }) => {
+    graphQLErrors.forEach(({ extensions }) => {
       if (
         (extensions as Dictionary<string> | undefined)?.code ===
         'BAD_USER_INPUT'
       ) {
-        // Sentry.captureMessage(
-        //   `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-        // );
+        /*
+         * Sentry.captureMessage(
+         *   `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+         * );
+         */
       }
     });
   }
