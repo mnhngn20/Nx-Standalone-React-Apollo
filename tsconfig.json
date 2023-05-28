@@ -1,5 +1,12 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "types": ["vite/client", "vitest"],
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -9,28 +16,16 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {},
-    "jsx": "react-jsx",
-    "allowJs": false,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "types": ["vite/client", "vitest"]
-  },
-  "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
+    "lib": ["es2021", "dom"],
+    "resolveJsonModule": true,
+    "paths": {
+      "@nx-standalone/core/ui": ["core/ui/src/index.ts"],
+      "@nx-standalone/core/utils": ["core/utils/src/index.ts"],
+      "#/configs/*": ["src/app/configs/*"]
     }
-  ],
-  "compileOnSave": false,
+  },
   "exclude": ["node_modules", "tmp"]
 }

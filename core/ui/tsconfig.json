@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "types": ["vite/client", "vitest"]
+  },
+  "ignorePatterns": ["!**/*"],
+  "files": [],
+  "include": [
+    ".eslintrc.js",
+    "src/*",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "**/*.eslintrc.json",
+    "src/**/*.{test|spec}.ts",
+    "src/**/*.{test|spec}.tsx",
+    "src/**/*.{test|spec}.js",
+    "src/**/*.{test|spec}.jsx",
+    "src/**/*.d.ts",
+    ".eslintrc.js",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "vite.config.ts",
+    "vitest.setup.ts"
+  ],
+  "extends": "../../tsconfig.json"
+}

@@ -1,12 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.less';
-
-import NxWelcome from './nx-welcome';
+import Shop from './shop/shop';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="acciona-new-project" />
+      <Shop />
     </div>
   );
 }

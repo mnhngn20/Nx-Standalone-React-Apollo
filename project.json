@@ -1,5 +1,5 @@
 {
-  "name": "acciona-new-project",
+  "name": "nx-standalone",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./src",
   "projectType": "application",
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/acciona-new-project"
+        "outputPath": "dist/nx-standalone"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "acciona-new-project:build"
+        "buildTarget": "nx-standalone:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "acciona-new-project:build:development",
+          "buildTarget": "nx-standalone:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "acciona-new-project:build:production",
+          "buildTarget": "nx-standalone:build:production",
           "hmr": false
         }
       }
@@ -41,23 +41,23 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "acciona-new-project:build"
+        "buildTarget": "nx-standalone:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "acciona-new-project:build:development"
+          "buildTarget": "nx-standalone:build:development"
         },
         "production": {
-          "buildTarget": "acciona-new-project:build:production"
+          "buildTarget": "nx-standalone:build:production"
         }
       }
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/acciona-new-project"],
+      "outputs": ["coverage/nx-standalone"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "coverage/acciona-new-project"
+        "reportsDirectory": "coverage/nx-standalone"
       }
     },
     "lint": {
@@ -70,7 +70,7 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "acciona-new-project:build"
+        "buildTarget": "nx-standalone:build"
       }
     }
   },

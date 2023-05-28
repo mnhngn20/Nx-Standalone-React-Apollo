@@ -1,13 +1,22 @@
 import { StrictMode } from 'react';
+import { StyleProvider } from '@ant-design/cssinjs';
+import { ApolloProvider } from '@apollo/client';
+import { ConfigProvider, getPopupContainer } from '@enouvo/react-uikit';
 import * as ReactDOM from 'react-dom/client';
-
+import { client } from '#/configs/graphql/apollo-client';
 import App from './app/app';
+import '#/configs/themes/index.less';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <ConfigProvider getPopupContainer={getPopupContainer}>
+        <StyleProvider hashPriority="high">
+          <App />
+        </StyleProvider>
+      </ConfigProvider>
+    </ApolloProvider>
   </StrictMode>
 );
