@@ -18,5 +18,5 @@ root.render(
         </StyleProvider>
       </ConfigProvider>
     </ApolloProvider>
-  </StrictMode>
+  </StrictMode>,
 );

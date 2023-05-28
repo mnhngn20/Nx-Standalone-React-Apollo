@@ -27,5 +27,13 @@
       "#/configs/*": ["src/app/configs/*"]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".prettierrc.js",
+    ".eslintrc.js"
+  ]
 }
