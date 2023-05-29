@@ -14,9 +14,7 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "#/configs/*": ["src/app/configs/*"],
-      "@nx-standalone/core/ui": ["core/ui/src/index.ts"],
-      "@nx-standalone/core/utils": ["core/utils/src/index.ts"]
+      "#/configs/*": ["src/configs/*"]
     }
   },
   "exclude": ["node_modules", "build", "./__tests__/e2e", "amplify", "e2e"],
@@ -26,6 +24,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".prettierrc.js",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "commitlint.config.js",
+    "lint-staged.config.js",
+    "tailwind.config.js",
+    "postcss.config.js"
   ]
 }
