@@ -2,25 +2,18 @@
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": false,
-    "noEmit": true,
-    "moduleResolution": "Node",
-    "target": "ESNext",
-    "module": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext", "ES2021.String"],
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "jsx": "react-jsx",
-    "allowJs": false,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "incremental": true,
     "paths": {
       "#/assets/*": ["src/assets/*"],
       "#/components/*": ["src/components/*"],
@@ -50,17 +43,5 @@
       "@nx-standalone/lib/shared/types/*": ["lib/shared/src/types/*"]
     }
   },
-  "exclude": ["node_modules", "build", "./__tests__/e2e", "amplify", "e2e"],
-  "include": [
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.tsx",
-    ".prettierrc.js",
-    ".eslintrc.js",
-    "commitlint.config.js",
-    "lint-staged.config.js",
-    "tailwind.config.js",
-    "postcss.config.js"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

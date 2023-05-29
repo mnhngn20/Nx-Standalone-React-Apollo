@@ -1,8 +1,8 @@
 {
-  "root": true,
-  "ignorePatterns": ["**/*", "scripts/*"],
-  "plugins": ["@nx"],
   "extends": ["@enouvo/eslint-config-react"],
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -31,12 +31,6 @@
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nx/javascript"],
       "rules": {}
-    },
-    {
-      "files": ["*.{spec|test}.{ts|tsx|js|jsx}"],
-      "rules": {
-        "@typescript-eslint/no-unsafe-call": "off"
-      }
     }
   ]
 }

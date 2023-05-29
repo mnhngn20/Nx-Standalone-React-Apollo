@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "types": ["@types/node"],
+    "noEmit": true,
+    "allowJs": true,
+    "strictNullChecks": true
+  },
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "tools/**/*.ts",
+    ".eslintrc.js",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "prettierrc.js",
+    "commitlint.config.js",
+    "tailwind.config.js",
+    "lint-staged.config.js"
+  ]
+}

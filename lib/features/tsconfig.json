@@ -5,15 +5,17 @@
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "types": [
-      "vite/client",
-      "vitest",
-      "vitest/globals",
-      "vitest/importMeta",
-      "node"
-    ]
+    "types": ["vite/client", "vitest"]
   },
   "files": [],
-  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", ".eslintrc.js"],
-  "extends": "../../tsconfig.base.json"
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "extends": "../../tsconfig.json"
 }

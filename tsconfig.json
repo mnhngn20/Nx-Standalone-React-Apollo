@@ -1,36 +1,21 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compileOnSave": false,
   "compilerOptions": {
     "jsx": "react-jsx",
     "allowJs": false,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "incremental": true,
-    "outDir": "./dist/out-tsc",
-    "types": [
-      "vite/client",
-      "vitest",
-      "vitest/globals",
-      "vitest/importMeta",
-      "node"
-    ]
+    "types": ["vite/client", "vitest"]
   },
-  "exclude": ["node_modules", "tmp"],
-  "include": [
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    ".prettierrc.js",
-    ".eslintrc.js",
-    "commitlint.config.js",
-    "lint-staged.config.js",
-    "tailwind.config.js",
-    "postcss.config.js"
-  ]
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "extends": "./tsconfig.base.json"
 }
