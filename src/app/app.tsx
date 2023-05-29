@@ -1,11 +1,5 @@
-import Shop from './shop/shop';
-
 export function App() {
-  return (
-    <div>
-      <Shop />
-    </div>
-  );
+  return <div>Web</div>;
 }
 
 export default App;

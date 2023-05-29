@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "compilerOptions": {
     "jsx": "react-jsx",
@@ -6,32 +7,18 @@
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "outDir": "./dist/out-tsc",
     "types": [
       "vite/client",
       "vitest",
       "vitest/globals",
       "vitest/importMeta",
       "node"
-    ],
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "lib": ["es2021", "dom"],
-    "resolveJsonModule": true,
-    "paths": {
-      "#/configs/*": ["src/app/configs/*"],
-      "@nx-standalone/core/ui": ["core/ui/src/index.ts"],
-      "@nx-standalone/core/utils": ["core/utils/src/index.ts"]
-    }
+    ]
   },
   "exclude": ["node_modules", "tmp"],
   "include": [

@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": false,
+    "declaration": false,
+    "noEmit": true,
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "ES2021.String"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "#/configs/*": ["src/app/configs/*"],
+      "@nx-standalone/core/ui": ["core/ui/src/index.ts"],
+      "@nx-standalone/core/utils": ["core/utils/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "build", "./__tests__/e2e", "amplify", "e2e"],
+  "include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    ".prettierrc.js",
+    ".eslintrc.js"
+  ]
+}
