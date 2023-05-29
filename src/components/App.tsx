@@ -1,4 +1,5 @@
-import Shared from '@nx-standalone/lib/shared/components/Shared';
+import Features from '@nx/lib/features/components/Features';
+import Shared from '@nx/lib/shared/components/Shared';
 import Welcome from './Welcome';
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <>
       <Welcome />
       <Shared />
+      <Features />
     </>
   );
 }

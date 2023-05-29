@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 
-export function Features() {
+export default function Features() {
   return (
     <div>
       <Button type="primary">Features</Button>
