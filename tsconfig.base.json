@@ -11,13 +11,46 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext", "ES2021.String"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "isolatedModules": true,
     "baseUrl": ".",
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
     "paths": {
-      "#/configs/*": ["src/configs/*"]
+      "#/assets/*": ["src/assets/*"],
+      "#/components/*": ["src/components/*"],
+      "#/configs/*": ["src/configs/*"],
+      "#/constants/*": ["src/constants/*"],
+      "#/graphql/*": ["src/graphql/*"],
+      "#/hocs/*": ["src/hocs/*"],
+      "#/hooks/*": ["src/hooks/*"],
+      "#/types/*": ["src/types/*"],
+      "@nx-standalone/lib/features/assets": ["lib/features/src/assets/*"],
+      "@nx-standalone/lib/features/components": [
+        "lib/features/src/components/*"
+      ],
+      "@nx-standalone/lib/features/configs/*": ["lib/features/src/configs/*"],
+      "@nx-standalone/lib/features/constants/*": [
+        "lib/features/src/constants/*"
+      ],
+      "@nx-standalone/lib/features/hocs/*": ["lib/features/src/hocs/*"],
+      "@nx-standalone/lib/features/hooks/*": ["lib/features/src/hooks/*"],
+      "@nx-standalone/lib/features/types/*": ["lib/features/src/types/*"],
+      "@nx-standalone/lib/generated": ["lib/generated/src/index.ts"],
+      "@nx-standalone/lib/shared/assets/*": ["lib/shared/src/assets/*"],
+      "@nx-standalone/lib/shared/components/*": ["lib/shared/src/components/*"],
+      "@nx-standalone/lib/shared/configs/*": ["lib/shared/src/configs/*"],
+      "@nx-standalone/lib/shared/hocs/*": ["lib/shared/src/hocs/*"],
+      "@nx-standalone/lib/shared/hooks/*": ["lib/shared/src/hooks/*"],
+      "@nx-standalone/lib/shared/types/*": ["lib/shared/src/types/*"]
     }
   },
-  "exclude": ["node_modules", "build", "./__tests__/e2e", "amplify", "e2e"],
+  "exclude": ["build", "./__tests__/e2e", "amplify", "e2e"],
   "include": [
     "**/*.js",
     "**/*.jsx",

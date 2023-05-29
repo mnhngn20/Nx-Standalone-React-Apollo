@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "types": [
+      "vite/client",
+      "vitest",
+      "vitest/globals",
+      "vitest/importMeta",
+      "node"
+    ]
+  },
+  "files": [],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", ".eslintrc.js"],
+  "extends": "../../tsconfig.base.json"
+}

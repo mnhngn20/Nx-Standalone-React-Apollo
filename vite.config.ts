@@ -4,9 +4,9 @@ import type { PluginOption } from 'vite';
 import { defineConfig, loadEnv } from 'vite';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
-const htmlPlugin: (
-  env: Record<string, string | undefined>,
-) => PluginOption = env => ({
+const htmlPlugin: (env: Record<string, string | undefined>) => PluginOption = (
+  env
+) => ({
   name: 'html-transform',
   transformIndexHtml: {
     enforce: 'pre',
@@ -23,13 +23,7 @@ export default ({ mode }: { mode: string }) => {
     optimizeDeps: {
       include: ['@ant-design/icons'],
     },
-    plugins: [
-      react(),
-      htmlPlugin(process.env),
-      viteTsConfigPaths({
-        root: './',
-      }),
-    ],
+    plugins: [react(), htmlPlugin(process.env), viteTsConfigPaths()],
     preview: {
       host: 'localhost',
       port: 3000,
