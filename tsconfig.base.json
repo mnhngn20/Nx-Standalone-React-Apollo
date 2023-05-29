@@ -43,7 +43,6 @@
       "@nx-standalone/lib/features/types/*": ["lib/features/src/types/*"],
       "@nx-standalone/lib/generated": ["lib/generated/src/index.ts"],
       "@nx-standalone/lib/shared/assets/*": ["lib/shared/src/assets/*"],
-      "@nx-standalone/lib/shared/components/*": ["lib/shared/src/components/*"],
       "@nx-standalone/lib/shared/configs/*": ["lib/shared/src/configs/*"],
       "@nx-standalone/lib/shared/hocs/*": ["lib/shared/src/hocs/*"],
       "@nx-standalone/lib/shared/hooks/*": ["lib/shared/src/hooks/*"],

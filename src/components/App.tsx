@@ -1,11 +1,14 @@
-import { LibSharedUi } from '@nx/lib/shared';
+import { Button, Input } from '@nx/lib/shared';
 import Welcome from './Welcome';
 
 export default function App() {
   return (
     <>
       <Welcome />
-      <LibSharedUi />
+
+      <div>Test purpose</div>
+      <Button />
+      <Input />
     </>
   );
 }
