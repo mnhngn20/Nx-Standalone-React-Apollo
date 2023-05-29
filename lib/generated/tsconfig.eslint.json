@@ -12,9 +12,6 @@
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.ts",
-    "src/**/*.tsx",
-    "prettierrc.js",
-    "commitlint.config.js",
-    "tailwind.config.js"
+    "src/**/*.tsx"
   ]
 }
