@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-
 import CoreUi from './core-ui';
 
 describe('CoreUi', () => {

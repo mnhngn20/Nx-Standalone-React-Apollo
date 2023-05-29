@@ -6,7 +6,13 @@
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "types": ["vite/client", "vitest"],
+    "types": [
+      "vite/client",
+      "vitest",
+      "vitest/globals",
+      "vitest/importMeta",
+      "node"
+    ],
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -22,9 +28,9 @@
     "lib": ["es2021", "dom"],
     "resolveJsonModule": true,
     "paths": {
+      "#/configs/*": ["src/app/configs/*"],
       "@nx-standalone/core/ui": ["core/ui/src/index.ts"],
-      "@nx-standalone/core/utils": ["core/utils/src/index.ts"],
-      "#/configs/*": ["src/app/configs/*"]
+      "@nx-standalone/core/utils": ["core/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"],

@@ -5,7 +5,11 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "lint-all": "nx run-many --target=lint",
+    "lint-staged": "lint-staged",
+    "lint": "nx lint --fix",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +29,8 @@
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "@enouvo/eslint-config-react": "^2.0.0",
     "@nx/cypress": "16.2.2",
     "@nx/eslint-plugin": "16.2.2",
@@ -56,6 +62,7 @@
     "jsdom": "~20.0.3",
     "less": "3.12.2",
     "nx": "16.2.2",
+    "husky": "^8.0.3",
     "nx-cloud": "latest",
     "plugin-react": "link:@types/@vitejs/plugin-react",
     "postcss": "^8.4.23",
@@ -66,6 +73,7 @@
     "vite-plugin-dts": "~1.7.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.0.2",
-    "vitest": "^0.31.0"
+    "vitest": "^0.31.0",
+    "lint-staged": "^13.1.0"
   }
 }
