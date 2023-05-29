@@ -41,6 +41,8 @@ specifiers:
   eslint-plugin-react: 7.32.2
   eslint-plugin-react-hooks: 4.6.0
   husky: ^8.0.3
+  i18next: ^22.5.0
+  i18next-browser-languagedetector: ^7.0.1
   jsdom: ~20.0.3
   less: 3.12.2
   lint-staged: ^13.1.0
@@ -48,10 +50,11 @@ specifiers:
   nx-cloud: latest
   plugin-react: link:@types/@vitejs/plugin-react
   postcss: ^8.4.23
-  prettier: ^2.6.2
+  prettier: ^2.8.8
   prettier-plugin-tailwindcss: ^0.3.0
   react: 18.2.0
   react-dom: 18.2.0
+  react-i18next: ^12.3.1
   react-router-dom: ^6.11.2
   tailwind-merge: ^1.12.0
   tailwindcss: ^3.3.2
@@ -72,8 +75,11 @@ dependencies:
   '@swc/helpers': 0.5.1
   antd: 5.5.1_biqbaboplfbrettd7655fr4n2y
   apollo-link-error: 1.1.13_graphql@15.8.0
+  i18next: 22.5.0
+  i18next-browser-languagedetector: 7.0.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-i18next: 12.3.1_dje3x67x7taogjmwoynufb4r2i
   react-router-dom: 6.11.2_biqbaboplfbrettd7655fr4n2y
   tailwind-merge: 1.12.0
   tailwindcss: 3.3.2_ts-node@10.9.1
@@ -7024,6 +7030,12 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
     dev: true
+
+  /i18next-browser-languagedetector/7.0.1:
+    resolution: {integrity: sha512-Pa5kFwaczXJAeHE56CHG2aWzFBMJNUNghf0Pm4SwSrEMps/PTKqW90EYWlIvhuYStf3Sn1K0vw+gH3+TLdkH1g==}
+    dependencies:
+      '@babel/runtime': 7.21.5
+    dev: false
 
   /i18next/22.5.0:
     resolution: {integrity: sha512-sqWuJFj+wJAKQP2qBQ+b7STzxZNUmnSxrehBCCj9vDOW9RDYPfqCaK1Hbh2frNYQuPziz6O2CGoJPwtzY3vAYA==}

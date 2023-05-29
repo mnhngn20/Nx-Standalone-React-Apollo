@@ -1,1 +1,7 @@
 node_modules
+vitest.setup.ts
+vite.config.ts
+scripts/*
+src/generated/*
+src/vite-env.d.ts
+ts.config.json
