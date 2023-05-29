@@ -1,11 +1,11 @@
-import Shared from '@nx-standalone/lib/shared/components/Shared';
+import { LibSharedUi } from '@nx/lib/shared';
 import Welcome from './Welcome';
 
 export default function App() {
   return (
     <>
       <Welcome />
-      <Shared />
+      <LibSharedUi />
     </>
   );
 }

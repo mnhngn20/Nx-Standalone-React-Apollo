@@ -6,12 +6,12 @@ import dts from 'vite-plugin-dts';
 import { joinPathFragments } from '@nx/devkit';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/lib-features',
+  cacheDir: '../../node_modules/.vite/lib-shared',
 
   plugins: [
     dts({
       entryRoot: 'src',
-      tsConfigFilePath: joinPathFragments(__dirname, 'tsconfig.json'),
+      tsConfigFilePath: joinPathFragments(__dirname, 'tsconfig.lib.json'),
       skipDiagnostics: true,
     }),
     react(),
@@ -35,7 +35,7 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'lib-features',
+      name: 'lib-shared',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forgot to update your package.json as well.
