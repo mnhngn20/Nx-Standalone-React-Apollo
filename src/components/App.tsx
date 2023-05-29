@@ -1,11 +1,14 @@
-import Shared from '@nx-standalone/lib/shared/components/Shared';
+import { Button, Input } from '@nx/lib/shared';
 import Welcome from './Welcome';
 
 export default function App() {
   return (
     <>
       <Welcome />
-      <Shared />
+
+      <div>Test purpose</div>
+      <Button />
+      <Input />
     </>
   );
 }

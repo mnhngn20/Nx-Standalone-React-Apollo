@@ -43,11 +43,11 @@
       "@nx-standalone/lib/features/types/*": ["lib/features/src/types/*"],
       "@nx-standalone/lib/generated/*": ["lib/generated/src/*"],
       "@nx-standalone/lib/shared/assets/*": ["lib/shared/src/assets/*"],
-      "@nx-standalone/lib/shared/components/*": ["lib/shared/src/components/*"],
       "@nx-standalone/lib/shared/configs/*": ["lib/shared/src/configs/*"],
       "@nx-standalone/lib/shared/hocs/*": ["lib/shared/src/hocs/*"],
       "@nx-standalone/lib/shared/hooks/*": ["lib/shared/src/hooks/*"],
-      "@nx-standalone/lib/shared/types/*": ["lib/shared/src/types/*"]
+      "@nx-standalone/lib/shared/types/*": ["lib/shared/src/types/*"],
+      "@nx/lib/shared": ["lib/shared/src/components/index.ts"]
     }
   },
   "exclude": ["node_modules", "build", "./__tests__/e2e", "amplify", "e2e"],
