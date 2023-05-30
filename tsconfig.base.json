@@ -23,7 +23,50 @@
       "#/hocs/*": ["src/hocs/*"],
       "#/hooks/*": ["src/hooks/*"],
       "#/types/*": ["src/types/*"],
+      "@lib/features/posts/assets": [
+        "lib/features/posts/src/components/assets"
+      ],
+      "@lib/features/posts/components": [
+        "lib/features/posts/src/components/index.ts"
+      ],
+      "@lib/features/posts/constants": [
+        "lib/features/posts/src/constants/index.ts"
+      ],
+      "@lib/features/posts/generated": [
+        "lib/features/posts/src/generated/index.ts"
+      ],
+      "@lib/features/posts/helpers": [
+        "lib/features/posts/src/components/index.ts"
+      ],
+      "@lib/features/posts/hocs": ["lib/features/posts/src/hocs/index.ts"],
+      "@lib/features/posts/hooks": ["lib/features/posts/src/hooks/index.ts"],
+      "@lib/features/posts/types": ["lib/features/posts/src/types/index.ts"],
+      "@lib/features/users/assets": [
+        "lib/features/users/src/components/assets/index.ts"
+      ],
+      "@lib/features/users/components": [
+        "lib/features/users/src/components/index.ts"
+      ],
+      "@lib/features/users/constants": [
+        "lib/features/users/src/constants/index.ts"
+      ],
+      "@lib/features/users/generated": [
+        "lib/features/users/src/generated/index.ts"
+      ],
+      "@lib/features/users/helpers": [
+        "lib/features/users/src/components/index.ts"
+      ],
+      "@lib/features/users/hocs": ["lib/features/users/src/hocs/index.ts"],
+      "@lib/features/users/hooks": ["lib/features/users/src/hooks/index.ts"],
+      "@lib/features/users/types": ["lib/features/users/src/types/index.ts"],
+      "@lib/shared/assets": ["lib/shared/src/components/assets"],
       "@lib/shared/components": ["lib/shared/src/components/index.ts"],
+      "@lib/shared/constants": ["lib/shared/src/constants/index.ts"],
+      "@lib/shared/generated": ["lib/shared/src/generated/index.ts"],
+      "@lib/shared/helpers": ["lib/shared/src/components/index.ts"],
+      "@lib/shared/hocs": ["lib/shared/src/hocs/index.ts"],
+      "@lib/shared/hooks": ["lib/shared/src/hooks/index.ts"],
+      "@lib/shared/types": ["lib/shared/src/types/index.ts"],
       "@nx-standalone/lib/features/posts": ["lib/features/posts/src/index.ts"],
       "@nx-standalone/lib/features/users": ["lib/features/users/src/index.ts"],
       "@nx-standalone/lib/shared": ["lib/shared/src/index.ts"]
