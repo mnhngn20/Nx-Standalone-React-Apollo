@@ -23,6 +23,7 @@
       "#/hocs/*": ["src/hocs/*"],
       "#/hooks/*": ["src/hooks/*"],
       "#/types/*": ["src/types/*"],
+      "@lib/shared/components": ["lib/shared/src/components/index.ts"],
       "@nx-standalone/lib/features/posts": ["lib/features/posts/src/index.ts"],
       "@nx-standalone/lib/features/users": ["lib/features/users/src/index.ts"],
       "@nx-standalone/lib/shared": ["lib/shared/src/index.ts"]

@@ -1,1 +1,1 @@
-export * from './lib/lib-features-users';
+export * from './components';
