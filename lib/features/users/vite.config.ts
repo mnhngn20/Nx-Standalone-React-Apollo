@@ -6,7 +6,7 @@ import dts from 'vite-plugin-dts';
 import { joinPathFragments } from '@nx/devkit';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/lib-shared',
+  cacheDir: '../../../node_modules/.vite/lib-features-users',
 
   plugins: [
     dts({
@@ -16,7 +16,7 @@ export default defineConfig({
     }),
     react(),
     viteTsConfigPaths({
-      root: '../../',
+      root: '../../../',
     }),
   ],
 
@@ -24,7 +24,7 @@ export default defineConfig({
   // worker: {
   //  plugins: [
   //    viteTsConfigPaths({
-  //      root: '../../',
+  //      root: '../../../',
   //    }),
   //  ],
   // },
@@ -35,7 +35,7 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'lib-shared',
+      name: 'lib-features-users',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forgot to update your package.json as well.
@@ -50,7 +50,7 @@ export default defineConfig({
   test: {
     globals: true,
     cache: {
-      dir: '../../node_modules/.vitest',
+      dir: '../../../node_modules/.vitest',
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],

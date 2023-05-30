@@ -13,7 +13,7 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "#/assets/*": ["src/assets/*"],
       "#/components/*": ["src/components/*"],
@@ -23,31 +23,11 @@
       "#/hocs/*": ["src/hocs/*"],
       "#/hooks/*": ["src/hooks/*"],
       "#/types/*": ["src/types/*"],
-      "@nx/lib/features/assets/*": ["lib/features/src/assets/*"],
-      "@nx/lib/features/components/*": ["lib/features/src/components/*"],
-      "@nx/lib/features/configs/*": ["lib/features/src/configs/*"],
-      "@nx/lib/features/constants/*": ["lib/features/src/constants/*"],
-      "@nx/lib/features/hocs/*": ["lib/features/src/hocs/*"],
-      "@nx/lib/features/hooks/*": ["lib/features/src/hooks/*"],
-      "@nx/lib/features/types/*": ["lib/features/src/types/*"],
-      "@nx/lib/generated/*": ["lib/generated/src/*"],
-      "@nx/lib/shared/assets/*": ["lib/shared/src/assets/*"],
-      "@nx/lib/shared/components/*": ["lib/shared/src/components/*"],
-      "@nx/lib/shared/configs/*": ["lib/shared/src/configs/*"],
-      "@nx/lib/shared/hocs/*": ["lib/shared/src/hocs/*"],
-      "@nx/lib/shared/hooks/*": ["lib/shared/src/hooks/*"],
-      "@nx/lib/shared/types/*": ["lib/shared/src/types/*"]
+      "@nx-standalone/lib/features/posts": ["lib/features/posts/src/index.ts"],
+      "@nx-standalone/lib/features/users": ["lib/features/users/src/index.ts"],
+      "@nx-standalone/lib/shared": ["lib/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"],
-  "include": [
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "lib/**/*.js",
-    "lib/**/*.jsx",
-    "lib/**/*.ts",
-    "lib/**/*.tsx"
-  ]
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
 }
