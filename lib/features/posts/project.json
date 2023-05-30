@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "lib/features/posts/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["features"],
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
