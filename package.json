@@ -3,14 +3,17 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "prebuild": "pnpm check-types && pnpm lint",
     "start": "nx serve",
-    "build": "nx build",
+    "build": "pnpm prebuild && nx build",
     "test": "nx test",
     "lint-all": "nx run-many --target=lint",
     "lint-staged": "lint-staged",
     "lint": "nx lint --fix",
     "prepare": "husky install",
-    "gen:i18:keys": "ts-node --project scripts/tsconfig.json scripts/generateTranslationTypes.ts"
+    "gen:i18:keys": "ts-node --project scripts/tsconfig.json scripts/generateTranslationTypes.ts",
+    "tsc": "tsc --noEmit --pretty --p tsconfig.base.json",
+    "check-types": "nx run-many --target=tsc --nx-bail"
   },
   "private": true,
   "dependencies": {
