@@ -60,6 +60,7 @@
       "@lib/features/users/types": ["lib/features/users/src/types/index.ts"],
       "@lib/shared/assets": ["lib/shared/src/assets/index.ts"],
       "@lib/shared/components": ["lib/shared/src/components/index.ts"],
+      "@lib/shared/components/*": ["lib/shared/src/components/*"],
       "@lib/shared/constants": ["lib/shared/src/constants/index.ts"],
       "@lib/shared/generated": ["lib/shared/src/generated/index.ts"],
       "@lib/shared/helpers": ["lib/shared/src/helpers/index.ts"],
