@@ -73,6 +73,6 @@
       "@nx-standalone/lib/shared": ["lib/shared/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp", "vitest.setup.ts"],
+  "exclude": ["node_modules", "tmp", "vitest.setup.ts", "scripts/*"],
   "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
 }

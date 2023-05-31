@@ -1,12 +1,13 @@
-import translations from '../src/configs/locales/en.json';
-
 const keys: string[] = [];
 
 type TranslationRecord = {
   [P in string]: string | TranslationRecord;
 };
 
-const _traverseTranslations = (obj: TranslationRecord, path: string[]) => {
+export const _traverseTranslations = (
+  obj: TranslationRecord,
+  path: string[],
+) => {
   Object.keys(obj).forEach(key => {
     if (key.startsWith('_')) {
       return;
@@ -20,7 +21,7 @@ const _traverseTranslations = (obj: TranslationRecord, path: string[]) => {
   });
 };
 
-export const traverseTranslations = () => {
+export const traverseTranslations = (translations: any) => {
   _traverseTranslations(translations, []);
   return keys;
 };

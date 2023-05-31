@@ -35,6 +35,21 @@
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/lib/features/posts"
       }
+    },
+    "gen-translation-keys": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "en",
+      "options": {
+        "color": true
+      },
+      "configurations": {
+        "en": {
+          "command": "ts-node --project scripts/tsconfig.json scripts/generateTranslationTypes.ts --module features/posts --file en.json"
+        },
+        "vi": {
+          "command": "ts-node --project scripts/tsconfig.json scripts/generateTranslationTypes.ts --module features/posts --file vi.json"
+        }
+      }
     }
   }
 }
