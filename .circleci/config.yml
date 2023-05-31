@@ -71,11 +71,11 @@ workflows:
       - build:
           filters:
             branches:
-              only: main
+              only: circleci-project-setup
       - deploy:
           requires:
             - build
           filters:
             branches:
-              only: main
+              only: circleci-project-setup
           context: xfactor-staging
