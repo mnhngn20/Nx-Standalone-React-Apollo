@@ -20,7 +20,7 @@ commands:
       - run:
           name: Install Dependencies
           command: |
-            pnpm install
+            pnpm install --no-frozen-lockfile
       - save_cache:
           name: Save pnpm Package Cache
           key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
