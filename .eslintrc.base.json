@@ -48,6 +48,12 @@
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nx/javascript"],
       "rules": {}
+    },
+    {
+      "files": ["*.spec.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unsafe-call": "off"
+      }
     }
   ]
 }

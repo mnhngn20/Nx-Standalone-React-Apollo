@@ -1,4 +1,3 @@
-// @ts-nocheck
 /// <reference types="vitest" />
 import react from '@vitejs/plugin-react';
 import type { PluginOption } from 'vite';
@@ -37,6 +36,7 @@ export default ({ mode }: { mode: string }) => {
       port: 3000,
     },
     test: {
+      setupFiles: ['./vitest.setup.ts'],
       cache: {
         dir: './node_modules/.vitest',
       },
