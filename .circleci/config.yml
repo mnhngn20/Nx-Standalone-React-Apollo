@@ -36,6 +36,9 @@ jobs:
       - checkout
       - install_node_modules
       - run:
+          name: Update browserslist
+          command: npx update-browserslist-db@latest
+      - run:
           name: Lint and Test
           command: pnpm lint-staged --relative
 
