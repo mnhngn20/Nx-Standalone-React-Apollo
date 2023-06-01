@@ -6,7 +6,7 @@
     "framework": "react",
     "config": {
       "SourceDir": "src",
-      "DistributionDir": "dist",
+      "DistributionDir": "dist/nx-standalone",
       "BuildCommand": "pnpm build",
       "StartCommand": "pnpm start"
     }
