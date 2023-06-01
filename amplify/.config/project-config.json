@@ -7,8 +7,8 @@
     "config": {
       "SourceDir": "src",
       "DistributionDir": "dist",
-      "BuildCommand": "nx build",
-      "StartCommand": "nx start"
+      "BuildCommand": "pnpm build",
+      "StartCommand": "pnpm start"
     }
   },
   "providers": ["awscloudformation"]
