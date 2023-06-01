@@ -21,6 +21,9 @@ commands:
           name: Install Dependencies
           command: |
             pnpm install --no-frozen-lockfile
+      - run:
+          name: Update browserslist
+          command: npx update-browserslist-db@latest
       - save_cache:
           name: Save pnpm Package Cache
           key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
@@ -35,9 +38,6 @@ jobs:
     steps:
       - checkout
       - install_node_modules
-      - run:
-          name: Update browserslist
-          command: npx update-browserslist-db@latest
       - run:
           name: Lint and Test
           command: pnpm lint-staged --relative
