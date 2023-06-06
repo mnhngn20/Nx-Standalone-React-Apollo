@@ -81,7 +81,7 @@ jobs:
                   "fields": [
                     {
                       "type": "plain_text",
-                      "text": "*This is a text notification*",
+                      "text": "*Anh Kien doi*",
                       "emoji": true
                     }
                   ]
@@ -107,4 +107,4 @@ workflows:
   send-notification:
     jobs:
       - notify:
-          context: slack-integration-2
+          context: slack-integration
