@@ -3,7 +3,6 @@ version: 2.1
 orbs:
   node: circleci/node@5.1.0
   aws-cli: circleci/aws-cli@3.1.5
-  slack: circleci/slack@4.12.5
 
 commands:
   install_node_modules:
@@ -21,10 +20,7 @@ commands:
       - run:
           name: Install Dependencies
           command: |
-            pnpm install --no-frozen-lockfile
-      - run:
-          name: Update browserslist
-          command: npx update-browserslist-db@latest
+            pnpm install
       - save_cache:
           name: Save pnpm Package Cache
           key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
@@ -42,6 +38,7 @@ jobs:
       - run:
           name: Lint and Test
           command: pnpm lint-staged --relative
+
   deploy:
     executor:
       name: node/default
@@ -59,52 +56,60 @@ jobs:
           command: |
             aws --version
             amplify --version
-
       - run:
-          name: Checkout Amplify
+          name: 'Checkout Amplify'
           command: |
             amplify init --amplify "{\"envName\":\"$VITE_NODE_ENV\"}" --providers "{\"awscloudformation\":{\"useProfile\":true,\"profileName\":\"default\"}}" --yes
       - run:
           name: Deploy
           command: |
             amplify publish --invalidateCloudFront --codegen "{\"generateCode\":false}" --yes
-  notify:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - slack/notify:
-          custom: |
-            {
-              "blocks": [
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "plain_text",
-                      "text": "*Anh Kien doi*",
-                      "emoji": true
-                    }
-                  ]
-                }
-              ]
-            }
-          event: always
 
 workflows:
-  build-and-deploy-staging:
+  install-package-and-build:
     jobs:
-      - build:
-          filters:
-            branches:
-              only: circleci-project-setup
+      - build
+
+  deploy-staging:
+    jobs:
       - deploy:
           requires:
             - build
           filters:
             branches:
-              only: circleci-project-setup
+              only:
+                - develop
           context: xfactor-staging
-  send-notification:
+
+  deploy-uat:
     jobs:
-      - notify:
-          context: slack-integration
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - uat
+          context: xfactor-uat
+
+  deploy-sit:
+    jobs:
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - sit
+          context: xfactor-sit
+
+  deploy-release:
+    jobs:
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - release
+          context: xfactor-release
