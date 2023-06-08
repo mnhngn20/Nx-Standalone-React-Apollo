@@ -96,7 +96,7 @@ workflows:
             branches:
               only:
                 - uat
-          context: xfactor-uat
+          context: xfactor-staging
 
   deploy-sit:
     jobs:
@@ -112,7 +112,7 @@ workflows:
             branches:
               only:
                 - sit
-          context: xfactor-sit
+          context: xfactor-staging
 
   deploy-release:
     jobs:
@@ -128,4 +128,4 @@ workflows:
             branches:
               only:
                 - release
-          context: xfactor-release
+          context: xfactor-staging
