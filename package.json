@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prebuild": "pnpm check-types && pnpm lint && test-all",
+    "prebuild": "pnpm check-types && pnpm lint && pnpm test-all",
     "start": "nx serve",
     "build": "pnpm prebuild && nx build",
     "test": "nx test",

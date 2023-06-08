@@ -1,0 +1,15 @@
+{
+  "projectName": "nxstandalone",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "dist/nx-standalone",
+      "BuildCommand": "pnpm build",
+      "StartCommand": "pnpm start"
+    }
+  },
+  "providers": ["awscloudformation"]
+}
